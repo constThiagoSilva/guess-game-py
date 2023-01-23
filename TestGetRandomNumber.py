@@ -2,8 +2,6 @@ import unittest
 from random import randint
 
 def get_random_number(minimal_range: int ,maximum_range: int):
-    print(minimal_range, maximum_range)
-
     if minimal_range < 0:
         raise 'mininum range cannot be negative'
     if maximum_range < 0:
