@@ -1,13 +1,5 @@
 import unittest
-from random import randint
-
-def get_random_number(minimal_range: int ,maximum_range: int):
-    if minimal_range < 0:
-        raise 'mininum range cannot be negative'
-    if maximum_range < 0:
-        raise 'maximum range cannot be negative'
-
-    return randint(minimal_range, maximum_range)
+from getRandomNumber import get_random_number
 
 class TestGetRandomNumber(unittest.TestCase):
     def test_if_return_a_number(self):
