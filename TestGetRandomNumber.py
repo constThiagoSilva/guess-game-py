@@ -26,6 +26,13 @@ class TestGetRandomNumber(unittest.TestCase):
     def test_it_not_return_negative_number(self):
         self.assertFalse(get_random_number(1, 1) < 0)
 
+    def test_it_raises_an_error_if_minimum_parameter_is_greater_than_maximum(self):
+        mock_minimum_greater_than_maximum = 10
+        mock_maximum = 0
+
+        with self.assertRaises(TypeError) as error:
+            get_random_number(mock_minimum_greater_than_maximum, mock_maximum)
+            self.assertEqual('minimum range cannot be greater than maximum', str(error.exception))
 
 if __name__ == '__main__':
     unittest.main()
