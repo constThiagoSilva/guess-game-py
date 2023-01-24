@@ -16,10 +16,16 @@ while True:
 
             if number_to_be_guessed == chosen_number_by_user:
                 print('Parabens! Voce ganhou')
-                break
+                isExit = input('Voce quer continuar: s/n')
+
+                if 'n' in isExit:
+                    break
+
             elif number_to_be_guessed > chosen_number_by_user:
                 print('Tente um número mais alto!')
             else:
                 print('Tenter um número mais baixo!')
+
+        break
     except:
         print('insira um número válido!!!!')
