@@ -28,6 +28,11 @@ while True:
                         if 'n' in isExit:
                             break
 
+                        minimum_range = int(input('insira um número minimo para adivinhar:'))
+                        maximum_range = int(input('insira um número máximo para adivinhar'))
+        
+                        number_to_be_guessed = get_random_number(minimum_range, maximum_range)
+
                     elif number_to_be_guessed > chosen_number_by_user:
                         print('Tente um número mais alto!')
                     else:
