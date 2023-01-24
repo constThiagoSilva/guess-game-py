@@ -8,18 +8,13 @@ while True:
         maximum_range = int(input('insira um número máximo para adivinhar'))
         
         number_to_be_guessed = get_random_number(minimum_range, maximum_range)
-
         while True:
             while True:
                 try:
                     chosen_number_by_user = int(input('insira o número que voce ache ser o certo:'))
 
-
-
                     if chosen_number_by_user > maximum_range or chosen_number_by_user < minimum_range:
                         raise
-
-                    print(chosen_number_by_user, number_to_be_guessed)
 
                     if number_to_be_guessed == chosen_number_by_user:
                         print('Parabens! Voce ganhou')
@@ -32,7 +27,6 @@ while True:
                         maximum_range = int(input('insira um número máximo para adivinhar'))
         
                         number_to_be_guessed = get_random_number(minimum_range, maximum_range)
-
                     elif number_to_be_guessed > chosen_number_by_user:
                         print('Tente um número mais alto!')
                     else:
